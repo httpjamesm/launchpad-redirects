@@ -139,6 +139,8 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 #attribution-modal:target {
@@ -171,4 +173,11 @@ body {
     box-sizing: border-box;
     min-width: 25rem;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .modal-content {
+        min-width: auto;
+        width: 100%;
+    }
 }
