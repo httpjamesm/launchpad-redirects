@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/static/assets/fonts/sen-v7-latin-regular.eot");
+    /* IE9 Compat Modes */
+    /* IE6-IE8 */
+    /* Super Modern Browsers */
+    /* Modern Browsers */
+    /* Safari, Android, iOS */
+    src: local(""),
+        url("/static/assets/fonts/sen-v7-latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("/static/assets/fonts/sen-v7-latin-regular.woff2") format("woff2"),
+        url("/static/assets/fonts/sen-v7-latin-regular.woff") format("woff"),
+        url("/static/assets/fonts/sen-v7-latin-regular.ttf") format("truetype"),
+        url("/static/assets/fonts/sen-v7-latin-regular.svg#Sen") format("svg");
+    /* Legacy iOS */
+}
+/* sen-700 - latin */
+@font-face {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/static/assets/fonts/sen-v7-latin-700.eot");
+    /* IE9 Compat Modes */
+    /* IE6-IE8 */
+    /* Super Modern Browsers */
+    /* Modern Browsers */
+    /* Safari, Android, iOS */
+    src: local(""),
+        url("/static/assets/fonts/sen-v7-latin-700.eot?#iefix")
+            format("embedded-opentype"),
+        url("/static/assets/fonts/sen-v7-latin-700.woff2") format("woff2"),
+        url("/static/assets/fonts/sen-v7-latin-700.woff") format("woff"),
+        url("/static/assets/fonts/sen-v7-latin-700.ttf") format("truetype"),
+        url("/static/assets/fonts/sen-v7-latin-700.svg#Sen") format("svg");
+    /* Legacy iOS */
+}
+
+* {
+    font-family: "Sen", sans-serif;
+}
