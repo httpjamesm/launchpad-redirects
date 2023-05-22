@@ -41,3 +41,11 @@
 * {
     font-family: "Sen", sans-serif;
 }
+
+a {
+    color: #704cfe;
+}
+
+a:hover {
+    color: #5c3bcf;
+}
