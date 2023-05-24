@@ -57,6 +57,18 @@ func main() {
 			} else if lists.ContainsString(lists.StackOverflowDomains, parsed.Host) {
 				// replace domain with code.whatever.social
 				parsed.Host = "code.whatever.social"
+			} else if lists.ContainsString(lists.TikTokDomains, parsed.Host) {
+				// replace domain with cringe.whatever.social
+				parsed.Host = "cringe.whatever.social"
+			} else if lists.ContainsString(lists.YouTubeMusicDomains, parsed.Host) {
+				// replace domain with listen.whatever.social
+				parsed.Host = "listen.whatever.social"
+			} else if lists.ContainsString(lists.GeniusDomains, parsed.Host) {
+				// replace domain with sing.whatever.social
+				parsed.Host = "sing.whatever.social"
+			} else if lists.ContainsString(lists.ImgurDomains, parsed.Host) {
+				// replace domain with rimgo.whatever.social
+				parsed.Host = "rimgo.whatever.social"
 			} else {
 				// send error
 				c.HTML(200, "home.html", gin.H{
