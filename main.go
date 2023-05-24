@@ -57,6 +57,18 @@ func main() {
 			} else if lists.ContainsString(lists.StackOverflowDomains, parsed.Host) {
 				// replace domain with code.whatever.social
 				parsed.Host = "code.whatever.social"
+			} else if lists.ContainsString(lists.TikTokDomains, parsed.Host) {
+				// replace domain with cringe.whatever.social
+				parsed.Host = "cringe.whatever.social"
+			} else if lists.ContainsString(lists.YouTubeMusicDomains, parsed.Host) {
+				// replace domain with listen.whatever.social
+				parsed.Host = "listen.whatever.social"
+			} else if lists.ContainsString(lists.GeniusDomains, parsed.Host) {
+				// replace domain with sing.whatever.social
+				parsed.Host = "sing.whatever.social"
+			} else if lists.ContainsString(lists.ImgurDomains, parsed.Host) {
+				// replace domain with rimgo.whatever.social
+				parsed.Host = "rimgo.whatever.social"
 			} else {
 				// send error
 				c.HTML(200, "home.html", gin.H{
@@ -76,28 +88,58 @@ func main() {
 		c.HTML(200, "home.html", gin.H{
 			"Instances": []instance{
 				{
+					URL:         "https://code.whatever.social",
+					FaviconURL:  "/static/assets/apps/code.png",
+					Name:        "AnonymousOverflow",
+					Description: "Whatever's own frontend for StackOverflow and StackExchange.",
+				},
+				{
 					URL:         "https://discuss.whatever.social",
 					FaviconURL:  "/static/assets/apps/libreddit.png",
 					Name:        "Libreddit",
-					Description: "Private frontend for Reddit",
+					Description: "Alternative frontend for Reddit.",
 				},
 				{
 					URL:         "https://read.whatever.social",
 					FaviconURL:  "/static/assets/apps/nitter.png",
 					Name:        "Nitter",
-					Description: "Alternative Twitter frontend",
+					Description: "Alternative frontend for Twitter.",
 				},
 				{
 					URL:         "https://watch.whatever.social",
 					FaviconURL:  "/static/assets/apps/piped.png",
 					Name:        "Piped",
-					Description: "An alternative privacy-friendly YouTube frontend which is efficient by design.",
+					Description: "Alternative frontend for YouTube.",
 				},
 				{
-					URL:         "https://code.whatever.social",
-					FaviconURL:  "/static/assets/apps/code.png",
-					Name:        "Anonymous Overflow",
-					Description: "Get programming help in privacy.",
+					URL:         "https://cringe.whatever.social",
+					FaviconURL:  "/static/assets/apps/proxitok.png",
+					Name:        "ProxiTok",
+					Description: "Alternative frontend for TikTok.",
+				},
+				{
+					URL:         "https://listen.whatever.social",
+					FaviconURL:  "/static/assets/apps/hyperpipe.png",
+					Name:        "Hyperpipe",
+					Description: "Alternative frontend for YouTube Music.",
+				},
+				{
+					URL:         "https://sing.whatever.social",
+					FaviconURL:  "/static/assets/apps/dumb.png",
+					Name:        "Dumb",
+					Description: "Alternative frontend for Genius.",
+				},
+				{
+					URL:         "https://rimgo.whatever.social",
+					FaviconURL:  "/static/assets/apps/rimgo.png",
+					Name:        "Rimgo",
+					Description: "Alternative frontend for Imgur.",
+				},
+				{
+					URL:         "https://notavault.com",
+					FaviconURL:  "/static/assets/apps/vaultwarden.png",
+					Name:        "Vaultwarden",
+					Description: "Whatever's self-hosted instance of Vaultwarden, a fork of Bitwarden. 3 copies of data at all times, including one in Scaleway's nuclear fallout shelter.",
 				},
 			},
 		})
