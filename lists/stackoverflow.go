@@ -1,5 +1,5 @@
 package lists
 
 var StackOverflowDomains = []string{
-	"stackoverflow.com",
+	"stackoverflow.com", "stackexchange.com"
 }
