@@ -16,7 +16,7 @@ body {
     width: 100%;
     background-image: linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 1)
         ),
         url("/static/assets/banner.png");
@@ -85,7 +85,7 @@ body {
 }
 
 .hero .floating-call {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     margin-bottom: 1rem;
     width: 100%;
@@ -173,6 +173,42 @@ body {
     box-sizing: border-box;
     min-width: 25rem;
     border-radius: 10px;
+}
+
+.instances {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.instances .list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70rem;
+    justify-content: space-evenly;
+}
+
+.instances .list .instance {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 15px;
+    background-color: #4B38DA;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition-duration: 250ms;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.instances .list .instance:hover {
+    border: 2px solid white;
+    transform: translateY(-0.5rem);
+}
+
+.instances .list .instance img {
+    height: 100%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 800px) {

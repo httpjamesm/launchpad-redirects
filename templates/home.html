@@ -41,7 +41,7 @@
                 </svg>
             </a>
         </div>
-        <div class="hero">
+        <section class="hero">
             <div class="container">
                 <div class="title">
                     <img
@@ -50,11 +50,12 @@
                     />
                     <h1>Launchpad</h1>
                 </div>
-                <form method="POST" action="/">
+                <form action="/">
                     <input
                         class="url-input"
                         type="url"
                         placeholder="Take me to Whatever..."
+                        name="url"
                     />
                     <button>
                         <svg
@@ -86,7 +87,18 @@
             <div class="floating-call">
                 <p>Scroll Down For Instances</p>
             </div>
-        </div>
+        </section>
+        <section class="instances" id="instances">
+            <div class="list">
+                {{ range .Instances }}
+                <div class="instance">
+                    <a href="{{ .URL }}" target="_blank">
+                        <img src="{{ .FaviconURL }}" alt="{{ .Name }} Logo" />
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+        </section>
 
         <div id="attribution-modal">
             <div class="modal-content">
