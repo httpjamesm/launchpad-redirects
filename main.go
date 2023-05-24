@@ -76,12 +76,12 @@ func main() {
 		c.HTML(200, "home.html", gin.H{
 			"Instances": []instance{
 				{
-					URL:        "https://code.whatever.social",
-					FaviconURL: "/static/assets/apps/code.png",
-					Name:       "AnonymousOverflow",
-          Description: "Whatever's own frontend for StackOverflow and StackExchange.",
+					URL:         "https://code.whatever.social",
+					FaviconURL:  "/static/assets/apps/code.png",
+					Name:        "AnonymousOverflow",
+					Description: "Whatever's own frontend for StackOverflow and StackExchange.",
 				},
-        {
+				{
 					URL:         "https://discuss.whatever.social",
 					FaviconURL:  "/static/assets/apps/libreddit.png",
 					Name:        "Libreddit",
@@ -100,36 +100,34 @@ func main() {
 					Description: "Alternative frontend for YouTube.",
 				},
 				{
-					URL:        "https://cringe.whatever.social",
-					FaviconURL: "/static/assets/apps/proxitok.png",
-					Name:       "ProxiTok",
-          Description: "Alternative frontend for TikTok.",
+					URL:         "https://cringe.whatever.social",
+					FaviconURL:  "/static/assets/apps/proxitok.png",
+					Name:        "ProxiTok",
+					Description: "Alternative frontend for TikTok.",
 				},
 				{
-					URL:        "https://listen.whatever.social",
-					FaviconURL: "/static/assets/apps/hyperpipe.png",
-					Name:       "Hyperpipe",
-          Description: "Alternative frontend for YouTube Music.",
+					URL:         "https://listen.whatever.social",
+					FaviconURL:  "/static/assets/apps/hyperpipe.png",
+					Name:        "Hyperpipe",
+					Description: "Alternative frontend for YouTube Music.",
 				},
 				{
-					URL:        "https://sing.whatever.social",
-					FaviconURL: "/static/assets/apps/dumb.png",
-					Name:       "Dumb",
-          Description: "Alternative frontend for Genius.",
+					URL:         "https://sing.whatever.social",
+					FaviconURL:  "/static/assets/apps/dumb.png",
+					Name:        "Dumb",
+					Description: "Alternative frontend for Genius.",
 				},
 				{
-					URL:        "https://rimgo.whatever.social",
-					FaviconURL: "/static/assets/apps/rimgo.png",
-					Name:       "Rimgo",
-          Description: "Alternative frontend for Imgur.",
+					URL:         "https://rimgo.whatever.social",
+					FaviconURL:  "/static/assets/apps/rimgo.png",
+					Name:        "Rimgo",
+					Description: "Alternative frontend for Imgur.",
 				},
 				{
-					URL:        "https://notavault.com",
-					FaviconURL: "/static/assets/apps/vaultwarden.png",
-					Name:       "Vaultwarden",
-          Description: "Whatever's self-hosted instance of Vaultwarden, \
-          a fork of Bitwarden. 3 copies of data at all times, including \
-          one in Scaleway's nuclear fallout shelter.",
+					URL:         "https://notavault.com",
+					FaviconURL:  "/static/assets/apps/vaultwarden.png",
+					Name:        "Vaultwarden",
+					Description: "Whatever's self-hosted instance of Vaultwarden, a fork of Bitwarden. 3 copies of data at all times, including one in Scaleway's nuclear fallout shelter.",
 				},
 			},
 		})
