@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/static/styles/home.css" />
         {{ template "global_head.html" }}
-    </head> 
+    </head>
     <body>
         <div class="top-right-icons">
             <a
@@ -54,12 +54,40 @@
                     <h1>Launchpad</h1>
                 </div>
                 <form action="/">
-                    <input
-                        class="url-input"
-                        type="url"
-                        placeholder="Take me to Whatever..."
-                        name="url"
-                    />
+                    <div class="url-input">
+                        <input
+                            class="url-input-field"
+                            type="url"
+                            placeholder="Take me to Whatever..."
+                            name="url"
+                        />
+                        <a href="#bar-info">
+                            <div class="icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="ionicon"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        d="M256 80a176 176 0 10176 176A176 176 0 00256 80z"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-miterlimit="10"
+                                        stroke-width="32"
+                                    />
+                                    <path
+                                        d="M200 202.29s.84-17.5 19.57-32.57C230.68 160.77 244 158.18 256 158c10.93-.14 20.69 1.67 26.53 4.45 10 4.76 29.47 16.38 29.47 41.09 0 26-17 37.81-36.37 50.8S251 281.43 251 296"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-miterlimit="10"
+                                        stroke-width="28"
+                                    />
+                                    <circle cx="250" cy="348" r="20" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
                     <button>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -102,6 +130,62 @@
                 {{ end }}
             </div>
         </section>
+
+        <div id="bar-info">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Launch Bar?</h2>
+                    <a href="#" aria-label="Close Modal"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="ionicon"
+                            viewBox="0 0 512 512"
+                        >
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="32"
+                                d="M368 368L144 144M368 144L144 368"
+                            /></svg
+                    ></a>
+                </header>
+                <p>
+                    Whatever's Launch Bar allows quick and easy conversion of
+                    non-privacy preserving URLs, such as Reddit, Twitter and
+                    YouTube links, into proxied content URLs using our selection
+                    of high-quality FOSS instances.
+                </p>
+                <p>
+                    By switching URLs to our proxies, your IP address, browser
+                    metadata or any other identifiable information will be
+                    hidden from the source providers, allowing you to browse
+                    content in complete anonymity.
+                </p>
+
+                <p>
+                    Launch Bar supports query parameters for redirection
+                    automation. For example,
+                </p>
+                <code
+                    >https://launch.whatever.social?url=https://reddit.com/u/httpjames</code
+                >
+                <p>
+                    will automatically redirect you to our Libreddit instance.
+                </p>
+
+                <p>
+                    As a result, you can also create a bookmarklet (a browser
+                    bookmark with code) that will automate this process.
+                </p>
+                <code
+                    >function launcher(){window.location.href =
+                    `https://launch.whatever.social?url=${window.location.href}`};
+                    launcher()</code
+                >
+            </div>
+        </div>
 
         <div id="attribution-modal">
             <div class="modal-content">
