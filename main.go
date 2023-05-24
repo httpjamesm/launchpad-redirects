@@ -75,6 +75,11 @@ func main() {
 		c.HTML(200, "home.html", gin.H{
 			"Instances": []instance{
 				{
+					URL:        "https://code.whatever.social",
+					FaviconURL: "/static/assets/apps/code.png",
+					Name:       "AnonymousOverflow",
+				},
+				{
 					URL:        "https://discuss.whatever.social",
 					FaviconURL: "/static/assets/apps/libreddit.png",
 					Name:       "Libreddit",
@@ -90,9 +95,34 @@ func main() {
 					Name:       "Piped",
 				},
 				{
+					URL:        "https://cringe.whatever.social",
+					FaviconURL: "/static/assets/apps/proxitok.png",
+					Name:       "ProxiTok",
+				},
+				{
+					URL:        "https://listen.whatever.social",
+					FaviconURL: "/static/assets/apps/hyperpipe.png",
+					Name:       "Hyperpipe",
+				},
+				{
+					URL:        "https://sing.whatever.social",
+					FaviconURL: "/static/assets/apps/dumb.png",
+					Name:       "Dumb",
+				},
+				{
 					URL:        "https://code.whatever.social",
 					FaviconURL: "/static/assets/apps/code.png",
 					Name:       "AnonymousOverflow",
+				},
+				{
+					URL:        "https://rimgo.whatever.social",
+					FaviconURL: "/static/assets/apps/code.png",
+					Name:       "AnonymousOverflow",
+				},
+				{
+					URL:        "https://notavault.com",
+					FaviconURL: "/static/assets/apps/vaultwarden.png",
+					Name:       "Vaultwarden",
 				},
 			},
 		})
