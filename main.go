@@ -20,6 +20,14 @@ func main() {
 
 	app.LoadHTMLGlob("templates/*")
 
+	app.Use(func(c *gin.Context) {
+		// add strict CSP
+
+		c.Header("Content-Security-Policy", "default-src 'self'; script-src 'none'; img-src 'self'; style-src 'self';")
+
+		c.Next()
+	})
+
 	app.GET("/", func(c *gin.Context) {
 		inputUrl := c.Query("url")
 		if inputUrl != "" {
@@ -68,22 +76,22 @@ func main() {
 			"Instances": []instance{
 				{
 					URL:        "https://discuss.whatever.social",
-					FaviconURL: "https://discuss.whatever.social/favicon.ico",
+					FaviconURL: "/static/assets/apps/libreddit.png",
 					Name:       "Libreddit",
 				},
 				{
 					URL:        "https://read.whatever.social",
-					FaviconURL: "https://read.whatever.social/favicon.ico",
+					FaviconURL: "/static/assets/apps/nitter.png",
 					Name:       "Nitter",
 				},
 				{
 					URL:        "https://watch.whatever.social",
-					FaviconURL: "https://watch.whatever.social/favicon.ico",
+					FaviconURL: "/static/assets/apps/piped.png",
 					Name:       "Piped",
 				},
 				{
 					URL:        "https://code.whatever.social",
-					FaviconURL: "https://code.whatever.social/static/codecircles.png",
+					FaviconURL: "/static/assets/apps/code.png",
 					Name:       "AnonymousOverflow",
 				},
 			},
