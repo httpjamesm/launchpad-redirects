@@ -129,11 +129,14 @@
         <section class="instances" id="instances">
             <div class="list">
                 {{ range .Instances }}
-                <div class="instance">
-                    <a href="{{ .URL }}" target="_blank">
+                <a href="{{ .URL }}" target="_blank">
+                    <div class="instance">
                         <img src="{{ .FaviconURL }}" alt="{{ .Name }} Logo" />
-                    </a>
-                </div>
+                        <div class="description">
+                            <p>{{ .Name }} • {{ .Description }}</p>
+                        </div>
+                    </div>
+                </a>
                 {{ end }}
             </div>
         </section>
