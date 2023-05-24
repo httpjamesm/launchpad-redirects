@@ -234,6 +234,26 @@ body {
     transform: translateY(-0.5rem);
 }
 
+.instances .list a .instance .description {
+    display: none;
+    transition-duration: 250ms;
+    width: fit-content;
+}
+
+.instances .list a:hover .instance > .description {
+    display: block;
+    color: white;
+}
+
+.instances .list a:hover .instance .description p {
+    margin: 0;
+    word-break: break-word;
+}
+
+.instances .list a:hover .instance > img {
+    display: none;
+}
+
 .instances .list .instance img {
     height: 100%;
     width: 100%;

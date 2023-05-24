@@ -8,9 +8,10 @@ import (
 )
 
 type instance struct {
-	URL        string
-	FaviconURL string
-	Name       string
+	URL         string
+	FaviconURL  string
+	Name        string
+	Description string
 }
 
 func main() {
@@ -75,24 +76,28 @@ func main() {
 		c.HTML(200, "home.html", gin.H{
 			"Instances": []instance{
 				{
-					URL:        "https://discuss.whatever.social",
-					FaviconURL: "/static/assets/apps/libreddit.png",
-					Name:       "Libreddit",
+					URL:         "https://discuss.whatever.social",
+					FaviconURL:  "/static/assets/apps/libreddit.png",
+					Name:        "Libreddit",
+					Description: "Private frontend for Reddit",
 				},
 				{
-					URL:        "https://read.whatever.social",
-					FaviconURL: "/static/assets/apps/nitter.png",
-					Name:       "Nitter",
+					URL:         "https://read.whatever.social",
+					FaviconURL:  "/static/assets/apps/nitter.png",
+					Name:        "Nitter",
+					Description: "Alternative Twitter frontend",
 				},
 				{
-					URL:        "https://watch.whatever.social",
-					FaviconURL: "/static/assets/apps/piped.png",
-					Name:       "Piped",
+					URL:         "https://watch.whatever.social",
+					FaviconURL:  "/static/assets/apps/piped.png",
+					Name:        "Piped",
+					Description: "An alternative privacy-friendly YouTube frontend which is efficient by design.",
 				},
 				{
-					URL:        "https://code.whatever.social",
-					FaviconURL: "/static/assets/apps/code.png",
-					Name:       "AnonymousOverflow",
+					URL:         "https://code.whatever.social",
+					FaviconURL:  "/static/assets/apps/code.png",
+					Name:        "Anonymous Overflow",
+					Description: "Get programming help in privacy.",
 				},
 			},
 		})
