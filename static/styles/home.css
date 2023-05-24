@@ -251,3 +251,17 @@ code {
     font-size: 0.9rem;
     font-family: "Fira Code", monospace;
 }
+
+.error {
+    width: 100%;
+    background-color: rgb(255, 153, 153);
+    color: black;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.error p {
+    margin: 0;
+}

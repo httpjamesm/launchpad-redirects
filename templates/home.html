@@ -55,6 +55,11 @@
                         <h1>Launchpad</h1>
                     </div>
                 </a>
+                {{ if .Error }}
+                <div class="error">
+                    <p>{{ .Error }}</p>
+                </div>
+                {{ end }}
                 <form action="/">
                     <div class="url-input">
                         <input

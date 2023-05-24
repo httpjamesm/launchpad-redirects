@@ -27,7 +27,7 @@ func main() {
 			parsed, err := url.Parse(inputUrl)
 			if err != nil {
 				c.HTML(200, "home.html", gin.H{
-					"error": err.Error(),
+					"Error": "Invalid URL",
 				})
 				return
 			}
@@ -39,21 +39,21 @@ func main() {
 			if lists.ContainsString(lists.RedditDomains, parsed.Host) {
 				// replace domain with discuss.whatever.social
 				parsed.Host = "discuss.whatever.social"
-			}
-
-			if lists.ContainsString(lists.TwitterDomains, parsed.Host) {
+			} else if lists.ContainsString(lists.TwitterDomains, parsed.Host) {
 				// replace domain with read.whatever.social
 				parsed.Host = "read.whatever.social"
-			}
-
-			if lists.ContainsString(lists.YouTubeDomains, parsed.Host) {
+			} else if lists.ContainsString(lists.YouTubeDomains, parsed.Host) {
 				// replace domain with watch.whatever.social
 				parsed.Host = "watch.whatever.social"
-			}
-
-			if lists.ContainsString(lists.StackOverflowDomains, parsed.Host) {
+			} else if lists.ContainsString(lists.StackOverflowDomains, parsed.Host) {
 				// replace domain with code.whatever.social
 				parsed.Host = "code.whatever.social"
+			} else {
+				// send error
+				c.HTML(200, "home.html", gin.H{
+					"Error": "Unsupported domain",
+				})
+				return
 			}
 
 			if parsed.Host != originalParsedHost {
