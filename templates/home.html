@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Whatever Launchpad Redirector</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/static/styles/home.css" />
         {{ template "global_head.html" }}
-    </head>
+    </head> 
     <body>
         <div class="top-right-icons">
-            <a href="#attribution-modal">
+            <a
+                href="#attribution-modal"
+                aria-label="Attribution Modal Toggle Icon Button"
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="ionicon"
@@ -104,7 +107,7 @@
             <div class="modal-content">
                 <header class="modal-header">
                     <h2>Attribution</h2>
-                    <a href="#"
+                    <a href="#" aria-label="Close Modal"
                         ><svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="ionicon"
