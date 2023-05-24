@@ -111,7 +111,7 @@ func main() {
 				},
 				{
 					URL:        "https://rimgo.whatever.social",
-					FaviconURL: "/static/assets/apps/code.png",
+					FaviconURL: "/static/assets/apps/rimgo.png",
 					Name:       "Rimgo",
 				},
 				{
