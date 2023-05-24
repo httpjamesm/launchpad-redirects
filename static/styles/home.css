@@ -35,6 +35,11 @@ body {
     align-items: center;
 }
 
+.hero .container a {
+    text-decoration: none;
+    color: white;
+}
+
 .hero .container .title {
     display: flex;
     gap: 1rem;
