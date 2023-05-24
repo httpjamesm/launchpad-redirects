@@ -110,14 +110,9 @@ func main() {
 					Name:       "Dumb",
 				},
 				{
-					URL:        "https://code.whatever.social",
-					FaviconURL: "/static/assets/apps/code.png",
-					Name:       "AnonymousOverflow",
-				},
-				{
 					URL:        "https://rimgo.whatever.social",
 					FaviconURL: "/static/assets/apps/code.png",
-					Name:       "AnonymousOverflow",
+					Name:       "Rimgo",
 				},
 				{
 					URL:        "https://notavault.com",
