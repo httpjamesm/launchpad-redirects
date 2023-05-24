@@ -139,7 +139,7 @@ func main() {
 					URL:         "https://notavault.com",
 					FaviconURL:  "/static/assets/apps/vaultwarden.png",
 					Name:        "Vaultwarden",
-					Description: "Whatever's self-hosted instance of Vaultwarden, a fork of Bitwarden. 3 copies of data at all times, including one in Scaleway's nuclear fallout shelter.",
+					Description: "Whatever's self-hosted instance of Vaultwarden, a fork of Bitwarden.",
 				},
 			},
 		})
