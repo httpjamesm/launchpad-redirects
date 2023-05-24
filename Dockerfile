@@ -17,4 +17,4 @@ RUN go build -o /launchpad
 
 EXPOSE 8080
 
-CMD ["/anonymousoverflow"]
+CMD ["/launchpad"]
