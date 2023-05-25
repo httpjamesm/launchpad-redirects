@@ -1,3 +1,3 @@
 package lists
 
-var RedditDomains = []string{"reddit.com", "redd.it"}
+var RedditDomains = []string{"www.reddit.com", "reddit.com", "redd.it"}
