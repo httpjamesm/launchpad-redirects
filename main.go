@@ -91,7 +91,7 @@ func main() {
 					URL:         "https://code.whatever.social",
 					FaviconURL:  "/static/assets/apps/code.png",
 					Name:        "AnonymousOverflow",
-					Description: "Whatever's own frontend for StackOverflow and StackExchange.",
+					Description: "Whatever's own frontend for StackOverflow.",
 				},
 				{
 					URL:         "https://discuss.whatever.social",
@@ -139,7 +139,7 @@ func main() {
 					URL:         "https://notavault.com",
 					FaviconURL:  "/static/assets/apps/vaultwarden.png",
 					Name:        "Vaultwarden",
-					Description: "Whatever's self-hosted instance of Vaultwarden, a fork of Bitwarden.",
+					Description: "Whatever's self-hosted instance of Vaultwarden, a Bitwarden fork.",
 				},
 			},
 		})
