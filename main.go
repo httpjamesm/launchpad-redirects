@@ -67,8 +67,8 @@ func main() {
 				// replace domain with sing.whatever.social
 				parsed.Host = "sing.whatever.social"
 			} else if lists.ContainsString(lists.ImgurDomains, parsed.Host) {
-				// replace domain with rimgo.whatever.social
-				parsed.Host = "rimgo.whatever.social"
+				// replace domain with images.whatever.social
+				parsed.Host = "images.whatever.social"
 			} else {
 				// send error
 				c.HTML(200, "home.html", gin.H{
@@ -130,7 +130,7 @@ func main() {
 					Description: "Alternative frontend for Genius.",
 				},
 				{
-					URL:         "https://rimgo.whatever.social",
+					URL:         "https://images.whatever.social",
 					FaviconURL:  "/static/assets/apps/rimgo.png",
 					Name:        "Rimgo",
 					Description: "Alternative frontend for Imgur.",
