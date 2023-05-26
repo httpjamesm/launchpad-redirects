@@ -142,6 +142,12 @@ func main() {
 					Description: "Alternative frontend for Fandom.",
 				},
 				{
+					URL:         "https://binge.whatever.social",
+					FaviconURL:  "/static/assets/apps/libremdb.png",
+					Name:        "Libremdb",
+					Description: "Alternative frontend for IMDb.",
+				},
+				{
 					URL:         "https://notavault.com",
 					FaviconURL:  "/static/assets/apps/vaultwarden.png",
 					Name:        "Vaultwarden",
