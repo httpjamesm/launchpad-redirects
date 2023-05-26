@@ -35,7 +35,7 @@ func main() {
 			// parse url domain
 			parsed, err := url.Parse(inputUrl)
 			if err != nil {
-				c.HTML(200, "home.html", gin.H{
+				c.HTML(400, "home.html", gin.H{
 					"Error": "Invalid URL",
 				})
 				return
@@ -71,7 +71,7 @@ func main() {
 				parsed.Host = "images.whatever.social"
 			} else {
 				// send error
-				c.HTML(200, "home.html", gin.H{
+				c.HTML(400, "home.html", gin.H{
 					"Error": "Unsupported domain",
 				})
 				return
