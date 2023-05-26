@@ -14,6 +14,75 @@ type instance struct {
 	Description string
 }
 
+var instances = []instance{
+	{
+		URL:         "https://code.whatever.social",
+		FaviconURL:  "/static/assets/apps/code.png",
+		Name:        "AnonymousOverflow",
+		Description: "Whatever's own frontend for StackOverflow.",
+	},
+	{
+		URL:         "https://discuss.whatever.social",
+		FaviconURL:  "/static/assets/apps/libreddit.png",
+		Name:        "Libreddit",
+		Description: "Alternative frontend for Reddit.",
+	},
+	{
+		URL:         "https://read.whatever.social",
+		FaviconURL:  "/static/assets/apps/nitter.png",
+		Name:        "Nitter",
+		Description: "Alternative frontend for Twitter.",
+	},
+	{
+		URL:         "https://watch.whatever.social",
+		FaviconURL:  "/static/assets/apps/piped.png",
+		Name:        "Piped",
+		Description: "Alternative frontend for YouTube.",
+	},
+	{
+		URL:         "https://cringe.whatever.social",
+		FaviconURL:  "/static/assets/apps/proxitok.png",
+		Name:        "ProxiTok",
+		Description: "Alternative frontend for TikTok.",
+	},
+	{
+		URL:         "https://listen.whatever.social",
+		FaviconURL:  "/static/assets/apps/hyperpipe.png",
+		Name:        "Hyperpipe",
+		Description: "Alternative frontend for YouTube Music.",
+	},
+	{
+		URL:         "https://sing.whatever.social",
+		FaviconURL:  "/static/assets/apps/dumb.png",
+		Name:        "Dumb",
+		Description: "Alternative frontend for Genius.",
+	},
+	{
+		URL:         "https://images.whatever.social",
+		FaviconURL:  "/static/assets/apps/rimgo.png",
+		Name:        "Rimgo",
+		Description: "Alternative frontend for Imgur.",
+	},
+	{
+		URL:         "https://nerd.whatever.social",
+		FaviconURL:  "/static/assets/apps/breezewiki.png",
+		Name:        "Breezewiki",
+		Description: "Alternative frontend for Fandom.",
+	},
+	{
+		URL:         "https://binge.whatever.social",
+		FaviconURL:  "/static/assets/apps/libremdb.png",
+		Name:        "Libremdb",
+		Description: "Alternative frontend for IMDb.",
+	},
+	{
+		URL:         "https://notavault.com",
+		FaviconURL:  "/static/assets/apps/vaultwarden.png",
+		Name:        "Vaultwarden",
+		Description: "Whatever's self-hosted instance of Vaultwarden, a Bitwarden fork.",
+	},
+}
+
 func main() {
 	app := gin.Default()
 
@@ -36,7 +105,8 @@ func main() {
 			parsed, err := url.Parse(inputUrl)
 			if err != nil {
 				c.HTML(400, "home.html", gin.H{
-					"Error": "Invalid URL",
+					"Error":     "Invalid URL",
+					"Instances": instances,
 				})
 				return
 			}
@@ -75,7 +145,8 @@ func main() {
 			} else {
 				// send error
 				c.HTML(400, "home.html", gin.H{
-					"Error": "Unsupported domain",
+					"Error":     "Unsupported domain",
+					"Instances": instances,
 				})
 				return
 			}
@@ -89,74 +160,7 @@ func main() {
 		}
 
 		c.HTML(200, "home.html", gin.H{
-			"Instances": []instance{
-				{
-					URL:         "https://code.whatever.social",
-					FaviconURL:  "/static/assets/apps/code.png",
-					Name:        "AnonymousOverflow",
-					Description: "Whatever's own frontend for StackOverflow.",
-				},
-				{
-					URL:         "https://discuss.whatever.social",
-					FaviconURL:  "/static/assets/apps/libreddit.png",
-					Name:        "Libreddit",
-					Description: "Alternative frontend for Reddit.",
-				},
-				{
-					URL:         "https://read.whatever.social",
-					FaviconURL:  "/static/assets/apps/nitter.png",
-					Name:        "Nitter",
-					Description: "Alternative frontend for Twitter.",
-				},
-				{
-					URL:         "https://watch.whatever.social",
-					FaviconURL:  "/static/assets/apps/piped.png",
-					Name:        "Piped",
-					Description: "Alternative frontend for YouTube.",
-				},
-				{
-					URL:         "https://cringe.whatever.social",
-					FaviconURL:  "/static/assets/apps/proxitok.png",
-					Name:        "ProxiTok",
-					Description: "Alternative frontend for TikTok.",
-				},
-				{
-					URL:         "https://listen.whatever.social",
-					FaviconURL:  "/static/assets/apps/hyperpipe.png",
-					Name:        "Hyperpipe",
-					Description: "Alternative frontend for YouTube Music.",
-				},
-				{
-					URL:         "https://sing.whatever.social",
-					FaviconURL:  "/static/assets/apps/dumb.png",
-					Name:        "Dumb",
-					Description: "Alternative frontend for Genius.",
-				},
-				{
-					URL:         "https://images.whatever.social",
-					FaviconURL:  "/static/assets/apps/rimgo.png",
-					Name:        "Rimgo",
-					Description: "Alternative frontend for Imgur.",
-				},
-				{
-					URL:         "https://nerd.whatever.social",
-					FaviconURL:  "/static/assets/apps/breezewiki.png",
-					Name:        "Breezewiki",
-					Description: "Alternative frontend for Fandom.",
-				},
-				{
-					URL:         "https://binge.whatever.social",
-					FaviconURL:  "/static/assets/apps/libremdb.png",
-					Name:        "Libremdb",
-					Description: "Alternative frontend for IMDb.",
-				},
-				{
-					URL:         "https://notavault.com",
-					FaviconURL:  "/static/assets/apps/vaultwarden.png",
-					Name:        "Vaultwarden",
-					Description: "Whatever's self-hosted instance of Vaultwarden, a Bitwarden fork.",
-				},
-			},
+			"Instances": instances,
 		})
 	})
 
