@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+    types: [opened, synchronize]
 
 jobs:
   build:
@@ -23,3 +24,11 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+      
+    - name: Set status
+      uses: github/set-status-action@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        state: ${{ job.status }}
+        context: Go Compilation
+        description: ${{ job.status }}
