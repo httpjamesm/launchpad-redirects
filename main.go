@@ -69,6 +69,9 @@ func main() {
 			} else if lists.ContainsString(lists.ImgurDomains, parsed.Host) {
 				// replace domain with images.whatever.social
 				parsed.Host = "images.whatever.social"
+			} else if lists.ContainsString(lists.ImdbDomains, parsed.Host) {
+				// replace domain with binge.whatever.social
+				parsed.Host = "binge.whatever.social"
 			} else {
 				// send error
 				c.HTML(400, "home.html", gin.H{
