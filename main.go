@@ -136,6 +136,12 @@ func main() {
 					Description: "Alternative frontend for Imgur.",
 				},
 				{
+					URL:         "https://nerd.whatever.social",
+					FaviconURL:  "/static/assets/apps/breezewiki.png",
+					Name:        "Breezewiki",
+					Description: "Alternative frontend for Fandom.",
+				},
+				{
 					URL:         "https://notavault.com",
 					FaviconURL:  "/static/assets/apps/vaultwarden.png",
 					Name:        "Vaultwarden",
