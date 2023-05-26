@@ -24,11 +24,12 @@ jobs:
 
     - name: Test
       run: go test -v ./...
-      
-    - name: Set status
-      uses: github/set-status-action@v2
+
+    - name: Run the action # You would run your tests before this using the output to set state/desc
+      uses: Sibz/github-status-action@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        state: ${{ job.status }}
-        context: Go Compilation
-        description: ${{ job.status }}
+        authToken: ${{secrets.GITHUB_TOKEN}}
+        context: 'Test run'
+        description: 'Passed'
+        state: 'success'
+        sha: ${{github.event.pull_request.head.sha || github.sha}}
