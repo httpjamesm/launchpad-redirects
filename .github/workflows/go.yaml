@@ -26,8 +26,8 @@ jobs:
       run: go test -v ./...
 
     - name: Run the action # You would run your tests before this using the output to set state/desc
-        uses: Sibz/github-status-action@v1
-        with: 
+      uses: Sibz/github-status-action@v1
+      with:
         authToken: ${{secrets.GITHUB_TOKEN}}
         context: 'Test run'
         description: 'Passed'
