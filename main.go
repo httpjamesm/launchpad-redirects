@@ -57,6 +57,11 @@ func main() {
 			} else if lists.ContainsString(lists.TikTokDomains, parsed.Host) {
 				// replace domain with cringe.whatever.social
 				parsed.Host = "cringe.whatever.social"
+			} else if lists.ContainsString(lists.TikTokShortenedDomains, parsed.Host) {
+				// replace domain with cringe.whatever.social
+				parsed.Host = "cringe.whatever.social"
+				// prepend placeholder path
+				parsed.Path = "/@placeholder/video" + parsed.Path
 			} else if lists.ContainsString(lists.YouTubeMusicDomains, parsed.Host) {
 				// replace domain with listen.whatever.social
 				parsed.Host = "listen.whatever.social"
