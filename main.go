@@ -103,12 +103,6 @@ func main() {
 					Description: "Alternative frontend for Reddit.",
 				},
 				{
-					URL:         "https://read.whatever.social",
-					FaviconURL:  "/static/assets/apps/nitter.png",
-					Name:        "Nitter",
-					Description: "Alternative frontend for Twitter.",
-				},
-				{
 					URL:         "https://watch.whatever.social",
 					FaviconURL:  "/static/assets/apps/piped.png",
 					Name:        "Piped",
