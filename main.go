@@ -48,9 +48,6 @@ func main() {
 			if lists.ContainsString(lists.RedditDomains, parsed.Host) {
 				// replace domain with discuss.whatever.social
 				parsed.Host = "discuss.whatever.social"
-			} else if lists.ContainsString(lists.TwitterDomains, parsed.Host) {
-				// replace domain with read.whatever.social
-				parsed.Host = "read.whatever.social"
 			} else if lists.ContainsString(lists.YouTubeDomains, parsed.Host) {
 				// replace domain with watch.whatever.social
 				parsed.Host = "watch.whatever.social"
